@@ -23,10 +23,9 @@ class MissHouseMeal {
 
         //결과를 오름차순 순서로 정렬
         result.sort(Comparator.comparing(Arrays::toString));
-        return result;
     }
 
-    public ArrayList<String[]> search(Stack<String> stack, int idx, String[] sideDishes, ArrayList<String[]> result){
+    public static ArrayList<String[]> search(Stack<String> stack, int idx, String[] sideDishes, ArrayList<String[]> result){
         // 탈출 조건
         if(idx >= sideDishes.length){
             // 만약, idx와 sideDishes의 길이가 같거나 크다면(마지막까지 검토한 경우) 스택을 배열로 변환한 후, 해당 스택을 result에 넣음.
@@ -42,7 +41,6 @@ class MissHouseMeal {
             stack.pop();
             search(stack, idx+1, sideDishes, result);
         }
-        System.out.println(result);
         return result;
     }
 }
