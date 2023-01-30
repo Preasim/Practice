@@ -1,17 +1,19 @@
 package daily;
 
-//class ReverseArr {
-//    public static void main(String[] args) {
-//        int[] arr = {1,2,3};
-//
-//        ReverseArr rs = new ReverseArr();
-//        System.out.println(rs.reverseByRecursive(arr));
-//    }
-//
-//    private String reverseByRecursive(String str){
-//        if((null == str) || str.length() <= 1){
-//            return str;
-//        }
-//        return reverseByRecursive(str.substring(1)) + str.charAt(0);
-//    }
-//}
+import java.util.Arrays;
+
+class ReverseArr {
+    public static void main(String[] args) {
+
+    }
+    public int[] reverseArr(int[] arr){
+        if(arr.length == 0) return new int[]{};
+        int[] head = Arrays.copyOfRange(arr, arr.length-1, arr.length);
+        int[] tail = reverseArr(Arrays.copyOfRange(arr, 0, arr.length-1));
+
+        int[] dest = new int[head.length + tail.length];
+        System.arraycopy(head, 0, dest, 0, head.length);
+        System.arraycopy(tail, 0, dest, head.length, tail.length);
+        return dest;
+    }
+}
