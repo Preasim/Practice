@@ -1,6 +1,6 @@
 package daily;
 
-import java.util.Arrays;
+
 import java.util.stream.Stream;
 
 public class NumberSearch {
@@ -14,11 +14,13 @@ public class NumberSearch {
                 .toArray();
 
 
-        int num = 0;
+        double num = 0;
         for(int i=0; i<intStrArr.length; i++){
             num+=intStrArr[i];
         }
         num = num / Wstr.length();
-        System.out.println(num);
+
+        int result = Integer.parseInt(String.format("%.0f", num));
+        System.out.println(result);
     }
 }
