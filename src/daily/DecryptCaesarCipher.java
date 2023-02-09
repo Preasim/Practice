@@ -23,6 +23,7 @@ public class DecryptCaesarCipher {
             }
         }
         System.out.println(result);
+        System.out.println("나는 바보다 웨헤헤헤헿ㅎ헿");
 
     }
 }
