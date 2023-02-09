@@ -3,7 +3,7 @@ package daily;
 
 import java.util.stream.Stream;
 
-public class NumberSearch {
+class NumberSearch {
     public static void main(String[] args) {
         String str = "Hello6 9World 2,";
 
