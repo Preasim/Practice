@@ -2,7 +2,7 @@ package daily;
 
 import java.util.Objects;
 
-public class CompressString {
+class CompressString {
     public static void main(String[] args) {
         String str = "wwwggoppopppp";
 
