@@ -1,7 +1,6 @@
 package daily;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 class Fibonacci {
     public static void main(String[] args) {
