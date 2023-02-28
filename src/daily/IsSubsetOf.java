@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// 두개의 배열을 입력받아 배열2가 배열1의 부분집합인지 여부
 class IsSubsetOf {
     public static void main(String[] args) {
         IsSubsetOfSolution isSubsetOfSolution = new IsSubsetOfSolution();
