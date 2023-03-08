@@ -2,16 +2,26 @@ package daily;
 
 import java.util.ArrayList;
 
-public class TreeDFS {
+class TreeDFS {
     public static void main(String[] args) {
 
     }
 }
 
-public class TreeDFSSolution {
+class TreeDFSSolution {
     public ArrayList<String> dfs(tree node){
-        // TODO :
+        ArrayList<String> values = new ArrayList<>();
+        values.add(node.getValue());
+
+        if(node.getChildrenNode() != null) {
+            for(int i = 0; i < node.getChildrenNode().size(); i++) {
+                ArrayList<String> curList = dfs(node.getChildrenNode().get(i));
+                values.addAll(curList);
+            }
+        }
+        return values;
     }
+
     public static class tree {
         private String value;
         private ArrayList<tree> children;
