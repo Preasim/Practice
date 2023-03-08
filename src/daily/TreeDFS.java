@@ -4,7 +4,20 @@ import java.util.ArrayList;
 
 class TreeDFS {
     public static void main(String[] args) {
+        TreeDFSSolution.tree root = new TreeDFSSolution.tree("A");
+        TreeDFSSolution.tree nodeB = root.addChildNode(new TreeDFSSolution.tree("B"));
+        TreeDFSSolution.tree nodeC = root.addChildNode(new TreeDFSSolution.tree("C"));
+        TreeDFSSolution.tree nodeD = nodeB.addChildNode(new TreeDFSSolution.tree("D"));
+        TreeDFSSolution.tree nodeE = nodeB.addChildNode(new TreeDFSSolution.tree("E"));
+        TreeDFSSolution.tree nodeF = nodeC.addChildNode(new TreeDFSSolution.tree("F"));
+        TreeDFSSolution.tree nodeG = nodeC.addChildNode(new TreeDFSSolution.tree("G"));
 
+        TreeDFSSolution dfsSolution = new TreeDFSSolution();
+        ArrayList<String> values = dfsSolution.dfs(root);
+
+        for(String value : values) {
+            System.out.println(value);
+        }
     }
 }
 
